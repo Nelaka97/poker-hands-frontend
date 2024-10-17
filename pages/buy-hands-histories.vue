@@ -6,7 +6,7 @@
     <div class="flex flex-col md:flex-row gap-6">
       <!-- Box 1 -->
       <div @click="selectBox(1)" :class="[
-        'w-full md:w-1/4 p-6 border-2 rounded-lg transition-colors duration-300 cursor-pointer',
+        'w-full md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/4 p-6 border-2 rounded-lg transition-colors duration-300 cursor-pointer',
         selectedBox === 1 ? 'border-white' : 'border-gray-700'
       ]" class="bg-primary text-white">
         <h3 class="text-xl font-semibold mb-2">Cash Game</h3>
@@ -15,7 +15,7 @@
 
       <!-- Box 2 -->
       <div @click="selectBox(2)" :class="[
-        'w-full md:w-1/4 p-6 border-2 rounded-lg transition-colors duration-300 cursor-pointer',
+        'w-full md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/4 p-6 border-2 rounded-lg transition-colors duration-300 cursor-pointer',
         selectedBox === 2 ? 'border-white' : 'border-gray-700'
       ]" class="box-bg text-white">
         <h3 class="text-xl font-semibold mb-2">Subscription</h3>
@@ -24,7 +24,7 @@
 
       <!-- Box 3 -->
       <div @click="selectBox(3)" :class="[
-        'w-full md:w-1/4 p-6 border-2 rounded-lg transition-colors duration-300 cursor-pointer',
+        'w-full md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/4 p-6 border-2 rounded-lg transition-colors duration-300 cursor-pointer',
         selectedBox === 3 ? 'border-white' : 'border-gray-700'
       ]" class="box-bg text-white">
         <h3 class="text-xl font-semibold mb-2">Sit and Go - MTT Hand Histories</h3>
@@ -36,158 +36,15 @@
 
   <section class="bg-black pb-16 px-[5%]">
     <!-- Title and Subtitle -->
-    <h2 class="text-3xl font-normal text-text-white2 font-gloock mb-2">Cash Game Hand Histories</h2>
-    <p class="text-xl text-text-white3 mb-8">Gain the Winning Edge: Purchase Hand Histories for Cash Games</p>
+    <!-- Conditionally render the title component based on selectedBox -->
+    <component :is="currentTitleComponent" />
 
     <!-- Container for the two columns -->
     <div class="flex flex-col lg:flex-row gap-8">
+
       <!-- Left Side (Form) -->
-      <div class="lg:w-8/12 box-bg border-2 border-gray2 p-6 rounded-md">
-        <!-- Poker Platform Selection -->
-        <div class="mb-6">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-5/6">
-            <button class="flex-1 bg-white border border-gray p-4 rounded-md hover:border-white transition text-white">
-              <img src="/logos/pokerstars.png" alt="PokerStars" class="mx-auto h-6">
-            </button>
-            <button class="flex-1 bg-white border border-gray p-4 rounded-md hover:border-white transition text-white">
-              <img src="/logos/ipoker.png" alt="iPoker" class="mx-auto h-6">
-            </button>
-            <button class="flex-1 bg-white border border-gray p-4 rounded-md hover:border-white transition text-white">
-              <img src="/logos/888poker.png" alt="888poker" class="mx-auto h-6">
-            </button>
-            <button class="flex-1 bg-white border border-gray p-4 rounded-md hover:border-white transition text-white">
-              <img src="/logos/ggpoker.png" alt="GGpoker" class="mx-auto h-6">
-            </button>
-          </div>
-        </div>
-
-
-        <!-- Game Selection -->
-        <div class="mb-6">
-          <div class="text-text-white3 mb-2">Games:</div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-5/6">
-            <button
-              class="flex-1 box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">Hold'em
-              NL</button>
-            <button
-              class="flex-1 box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">Hold'em
-              FL</button>
-            <button
-              class="flex-1 box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">Omaha
-              PL</button>
-            <button
-              class="flex-1 box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">Omaha
-              HL PL</button>
-            <button
-              class="flex-1 box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">Omaha
-              HL NL</button>
-            <button
-              class="flex-1 box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">Omaha
-              HL FL</button>
-          </div>
-        </div>
-
-        <!-- Stakes Selection -->
-        <div class="mb-6">
-          <div class="text-text-white3 mb-2">Stakes:</div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL2</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL5</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL10</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL16</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL25</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL50</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL100</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL200</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL400</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL500</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL600</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL1000</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL2000</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL4000</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL5000</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL10000</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL20000</button>
-            <button
-              class="box-bg border border-gray p-4 rounded-md hover:border-white transition text-white">NL40000</button>
-          </div>
-        </div>
-
-        <!-- Table Type Selector -->
-        <div class="mb-6">
-          <div class="text-text-white3 mb-2">Table Type:</div>
-          <div class="flex flex-wrap gap-2 box-bg border border-gray rounded-lg w-full md:w-1/2">
-            <button
-              class="flex-1 p-2 text-text-white3 border-b border-gray hover:bg-gray-700 focus:bg-gray-700 transition-colors duration-200 md:border-b-0 md:border-r">
-              All
-            </button>
-            <button
-              class="flex-1 p-2 text-text-white3 border-b border-gray hover:bg-gray-700 focus:bg-gray-700 transition-colors duration-200 md:border-b-0 md:border-r">
-              Short-Handed
-            </button>
-            <button
-              class="flex-1 p-2 text-text-white3 hover:bg-gray-700 focus:bg-gray-700 transition-colors duration-200">
-              Full Ring
-            </button>
-          </div>
-        </div>
-
-        <!-- Date Range Selector -->
-        <div class="mb-6">
-          <div class="text-text-white3 mb-2">Date Range:</div>
-          <div class="flex flex-col md:flex-row gap-4 w-full md:w-1/2">
-            <input type="date" placeholder="Start Date"
-              class="w-full box-bg border border-gray p-2 rounded-md text-text-white3">
-            <input type="date" placeholder="End Date"
-              class="w-full box-bg border border-gray p-2 rounded-md text-text-white3">
-          </div>
-        </div>
-
-
-
-
-        <!-- Hands Selector -->
-        <div class="mb-6">
-          <div class="text-text-white3 mb-2">Hands:</div>
-          <div class="flex items-center gap-6">
-            <input type="range" min="1000" max="3000000" class="w-5/6">
-            <input type="number" class="w-1/6 box-bg border border-gray p-3 rounded-md text-text-white3" value="1000">
-          </div>
-          <div class="mt-4 flex flex-wrap gap-4">
-            <button class="box-bg border border-gray p-2 px-4 rounded-3xl hover:border-white transition text-white">100
-              000</button>
-            <button class="box-bg border border-gray p-2 px-4 rounded-3xl hover:border-white transition text-white">250
-              000</button>
-            <button class="box-bg border border-gray p-2 px-4 rounded-3xl hover:border-white transition text-white">500
-              000</button>
-            <button class="box-bg border border-gray p-2 px-4 rounded-3xl hover:border-white transition text-white">1
-              000 000</button>
-            <button class="box-bg border border-gray p-2 px-4 rounded-3xl hover:border-white transition text-white">2
-              000 000</button>
-            <button class="box-bg border border-gray p-2 px-4 rounded-3xl hover:border-white transition text-white">3
-              000 000</button>
-
-            <!-- Add other hand count buttons as needed -->
-          </div>
-        </div>
-      </div>
+      <!-- Conditionally render the title component based on selectedBox -->
+      <component :is="currentFormComponent" />
 
       <!-- Right Side -->
       <div class="lg:w-4/12">
@@ -285,11 +142,47 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import CashGameTitle from './components/CashGameTitle.vue'; 
+import SubscriptionTitle from './components/SubscriptionTitle.vue'; 
+import SNGMTTTitle from './components/SNGMTTTitle.vue';
+import CashGame from './components/CashGame.vue'; 
+import Subscription from './components/Subscription.vue'; 
+import SNGMTT from './components/SNGMTT.vue'; 
 
-const selectedBox = ref(null);
+// Set the initial selected box to 1 (Cash Game) when the page loads
+const selectedBox = ref(1);
 
+// Function to select a box
 function selectBox(boxNumber) {
   selectedBox.value = boxNumber;
 }
+
+// Computed property to determine the current title component based on selectedBox
+const currentTitleComponent = computed(() => {
+  switch (selectedBox.value) {
+    case 1:
+      return CashGameTitle;
+    case 2:
+      return SubscriptionTitle;
+    case 3:
+      return SNGMTTTitle;
+    default:
+      return null; // Or a default title component if needed
+  }
+});
+
+// Computed property to determine the current title component based on selectedBox
+const currentFormComponent = computed(() => {
+  switch (selectedBox.value) {
+    case 1:
+      return CashGame;
+    case 2:
+      return Subscription;
+    case 3:
+      return SNGMTT;
+    default:
+      return null; // Or a default title component if needed
+  }
+});
 </script>
