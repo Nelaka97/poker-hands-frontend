@@ -45,22 +45,21 @@
       <div class="lg:w-8/12 box-bg border-2 border-gray2 p-6 rounded-md">
         <!-- Poker Platform Selection -->
         <div class="mb-6">
-          <div class="flex flex-wrap gap-4">
-            <button class="flex-1 bg-gray-300 p-3 rounded-md hover:bg-white transition text-white w-1/2 md:w-auto">
-              <img src="/logos/pokerstars.png" alt="PokerStars" class="mx-auto h-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-5/6">
+            <button class="flex-1 bg-white border border-gray p-4 rounded-md hover:border-white transition text-white">
+              <img src="/logos/pokerstars.png" alt="PokerStars" class="mx-auto h-6">
             </button>
-            <button class="flex-1 bg-gray-300 p-3 rounded-md hover:bg-white transition text-white w-1/2 md:w-auto">
-              <img src="/logos/ipoker.png" alt="iPoker" class="mx-auto h-8">
+            <button class="flex-1 bg-white border border-gray p-4 rounded-md hover:border-white transition text-white">
+              <img src="/logos/ipoker.png" alt="iPoker" class="mx-auto h-6">
             </button>
-            <button class="flex-1 bg-gray-300 p-3 rounded-md hover:bg-white transition text-white w-1/2 md:w-auto">
-              <img src="/logos/888poker.png" alt="888poker" class="mx-auto h-8">
+            <button class="flex-1 bg-white border border-gray p-4 rounded-md hover:border-white transition text-white">
+              <img src="/logos/888poker.png" alt="888poker" class="mx-auto h-6">
             </button>
-            <button class="flex-1 bg-gray-300 p-3 rounded-md hover:bg-white transition text-white w-1/2 md:w-auto">
-              <img src="/logos/ggpoker.png" alt="GGpoker" class="mx-auto h-8">
+            <button class="flex-1 bg-white border border-gray p-4 rounded-md hover:border-white transition text-white">
+              <img src="/logos/ggpoker.png" alt="GGpoker" class="mx-auto h-6">
             </button>
           </div>
         </div>
-
 
 
         <!-- Game Selection -->
@@ -212,17 +211,13 @@
           <div class="flex gap-4">
             <div class="flex gap-4">
               <button class="flex-1 bg-yellow-400 rounded-md hover:bg-gray-300 transition text-white">
-                <!-- Reduced padding for height -->
-                <img src="/logos/paypal.png" alt="paypal" class="mx-auto px-5"> <!-- Adjusted padding for the image -->
+                <img src="/logos/paypal.png" alt="paypal" class="mx-auto px-5 md:px-4 lg:px-6 xl:px-4 2xl:px-10">
               </button>
               <button class="flex-1 bg-white rounded-md hover:bg-gray-300 transition text-gray-700">
-                <!-- Reduced padding for height -->
-                <img src="/logos/gpay.png" alt="gpay" class="mx-auto px-5"> <!-- Adjusted padding for the image -->
+                <img src="/logos/gpay.png" alt="gpay" class="mx-auto px-5 md:px-4 lg:px-6 xl:px-4 2xl:px-10">
               </button>
               <button class="flex-1 bg-white rounded-md hover:bg-gray-300 transition text-gray-700">
-                <!-- Reduced padding for height -->
-                <img src="/logos/apple-pay.png" alt="applepay" class="mx-auto px-5">
-                <!-- Adjusted padding for the image -->
+                <img src="/logos/apple-pay.png" alt="applepay" class="mx-auto px-5 md:px-4 lg:px-6 xl:px-4 2xl:px-10">
               </button>
             </div>
           </div>
@@ -272,7 +267,7 @@
 
 
 
-        <button class="w-full mt-6 py-3 bg-white text-black text-bold rounded">Pay</button>
+        <button class="w-full mt-6 py-3 bg-white hover:bg-gray-300 text-black text-bold rounded">Pay</button>
 
         <!-- Additional Information -->
         <div class="mt-8">
