@@ -16,32 +16,21 @@
           class="lg:flex lg:items-center lg:ml-6">
           <div
             class="flex flex-col lg:flex-row lg:gap-6 px-[5%] lg:px-0 font-roboto text-base font-normal leading-6 text-left text-text-alternative">
-            <NuxtLink
-              to="/"
-              :class="getNavLinkClass('/')"
-              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base"
-            >
+            <NuxtLink to="/" :class="{ 'text-white': isActive('/').value, 'text-text-white5': !isActive('/').value }"
+              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base">
               Home
             </NuxtLink>
-            <NuxtLink
-              to="/about"
-              :class="getNavLinkClass('/about')"
-              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base"
-            >
+            <NuxtLink to="/about" :class="{ 'text-white': isActive('/about').value, 'text-text-white5': !isActive('/about').value }"
+              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base">
               About
             </NuxtLink>
-            <NuxtLink
-              to="/#contact"
-              :class="getNavLinkClass('/#contact')"
-              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base"
-            >
-              Contacts
+            <NuxtLink to="/#contacts"
+              :class="{ 'text-white': isActive('/', '#contacts').value, 'text-text-white5': !isActive('/', '#contacts').value }"
+              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base">
+              Contact
             </NuxtLink>
-            <NuxtLink
-              to="/buy-hands-histories"
-              :class="getNavLinkClass('/buy-hands-histories')"
-              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base"
-            >
+            <NuxtLink to="/buy-hands-histories" :class="{ 'text-white': isActive('/buy-hands-histories').value, 'text-text-white5': !isActive('/buy-hands-histories').value }"
+              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base">
               Buy Hands History
             </NuxtLink>
           </div>
@@ -70,20 +59,24 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 
 const isMobileMenuOpen = ref(false);
-const router = useRouter();
+const route = useRoute();
 
 function toggleMobileMenu() {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
 }
 
-function getNavLinkClass(path) {
-  return router.currentRoute.value.path === path
-    ? 'text-white'
-    : 'text-text-white5 hover:text-white';
-}
+// Function to determine if a specific path or hash should be considered active.
+const isActive = (path, hash = '') => computed(() => {
+  if (hash) {
+    // Check for both path and hash when hash is provided.
+    return route.path === path && route.hash === hash;
+  }
+  // Otherwise, match only the path.
+  return route.path === path && !route.hash;
+});
 </script>
 
 <style scoped>

@@ -167,7 +167,7 @@
     </div>
   </section>
 
-  <section id="contact" class="px-[5%] py-16 md:py-24 lg:py-28 bg-black">
+  <section id="contacts" class="px-[5%] py-16 md:py-24 lg:py-28 bg-black">
     <div class="container mx-auto">
       <div class="flex items-center justify-center text-center">
         <div class="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-3 md:gap-x-16 md:gap-y-20">
@@ -231,7 +231,4 @@
       </div>
     </div>
   </section>
-
-
-
 </template>

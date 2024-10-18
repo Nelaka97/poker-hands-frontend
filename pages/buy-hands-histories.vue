@@ -43,7 +43,7 @@
     <div class="flex flex-col lg:flex-row gap-8">
 
       <!-- Left Side (Form) -->
-      <!-- Conditionally render the title component based on selectedBox -->
+      <!-- Conditionally render the Form component based on selectedBox -->
       <component :is="currentFormComponent" />
 
       <!-- Right Side -->
