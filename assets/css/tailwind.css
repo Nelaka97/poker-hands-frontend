@@ -25,6 +25,10 @@
     background-color: #141618;
   }
 
+  .window-bg{
+    background-color: #101213;
+  }
+
   .bg-dark-gray{
     background-color: #444444;
   }
@@ -71,6 +75,10 @@
 
   .text-text-white4 {
     color: #444444; /* Replace with your desired primary text color */
+  }
+
+  .text-text-white5 {
+    color: #666666; /* Replace with your desired primary text color */
   }
 
   .text-text-black {

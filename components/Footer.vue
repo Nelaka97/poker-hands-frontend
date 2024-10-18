@@ -13,10 +13,10 @@
             <a href="/about" class="hover:underline">About</a>
           </li>
           <li class="font-semibold">
-            <a href="contacts" class="hover:underline">Contacts</a>
+            <a href="/#contact" class="hover:underline">Contacts</a>
           </li>
           <li class="font-semibold">
-            <a href="buy-hands-histories" class="hover:underline">Buy Hand History</a>
+            <a href="/buy-hands-histories" class="hover:underline">Buy Hand History</a>
           </li>
         </ul>
       </div>

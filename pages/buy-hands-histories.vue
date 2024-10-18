@@ -89,29 +89,29 @@
           </div>
           <form class="space-y-4">
             <div>
-              <label class="block text-text-white3 mb-1">Cardholder Name</label>
+              <label class="block text-text-white3 mb-1 text-sm">Cardholder Name</label>
               <input type="text" placeholder="John Doe"
                 class="w-full p-3 box-bg text-text-white4 border-2 border-gray2 rounded">
             </div>
             <div class="flex gap-4">
-              <div class="w-1/2">
-                <label class="block text-text-white3 mb-1">Card Number</label>
+              <div class="w-1/2"> 
+                <label class="block text-text-white3 mb-1 text-sm">Card Number</label>
                 <input type="text" placeholder="1234 5678 9012 3456"
                   class="w-full p-3 box-bg text-text-white4 border-2 border-gray2 rounded">
               </div>
               <div class="w-1/4">
-                <label class="block text-text-white3 mb-1">Expiry Date</label>
+                <label class="block text-text-white3 mb-1 text-sm">Expiry Date</label>
                 <input type="text" placeholder="MM/YY"
                   class="w-full p-3 box-bg text-text-white4 border-2 border-gray2 rounded">
               </div>
               <div class="w-1/4">
-                <label class="block text-text-white3 mb-1">CVV/CVC</label>
+                <label class="block text-text-white3 mb-1 text-sm">CVV/CVC</label>
                 <input type="text" placeholder="123"
                   class="w-full p-3 box-bg text-text-white4 border-2 border-gray2 rounded">
               </div>
             </div>
             <div>
-              <label class="block text-text-white3 mb-1">Email Address</label>
+              <label class="block text-text-white3 mb-1 text-sm">Email Address</label>
               <input type="email" placeholder="email@example.com"
                 class="w-full p-3 box-bg text-text-white4 border-2 border-gray2 rounded">
             </div>

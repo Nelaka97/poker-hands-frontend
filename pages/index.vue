@@ -1,5 +1,5 @@
 <template>
-  <section id="relume" class="relative flex items-center justify-start h-screen px-[5%] overflow-hidden">
+  <section id="video" class="relative flex items-center justify-start h-screen px-[5%] overflow-hidden">
     <!-- Background Video -->
     <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
       <source src="/bg-video.mp4" type="video/mp4" />
@@ -28,7 +28,7 @@
     </div>
   </section>
 
-  <section id="relume2" class="px-[5%] py-16 md:py-24 lg:py-28 bg-black text-text-white">
+  <section id="unlock-poker" class="px-[5%] py-16 md:py-24 lg:py-28 bg-black text-text-white">
     <div class="container mx-auto flex flex-col items-center">
       <div class="mb-12 text-center md:mb-18 lg:mb-20">
         <div class="w-full max-w-lg mx-auto">
@@ -52,8 +52,7 @@
             Comprehensive Hand Analysis Tools for Players
           </h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
-            elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+            Our tools provide detailed breakdowns of every hand.
           </p>
         </div>
         <div class="flex w-full flex-col items-center text-center">
@@ -64,8 +63,7 @@
             Advanced Statistics to Track Your Progress
           </h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
-            elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+            Monitor your performance with in-depth statistical insights.
           </p>
         </div>
         <div class="flex w-full flex-col items-center text-center">
@@ -76,8 +74,7 @@
             Downloadable Histories for Your Review
           </h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
-            elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+            Easily download your hand histories for offline analysis.
           </p>
         </div>
       </div>
@@ -91,7 +88,7 @@
     </div>
   </section>
 
-  <section id="relume3" class="px-[5%] py-16 md:py-24 lg:py-28 bg-black text-white">
+  <section id="card-pack" class="px-[5%] py-16 md:py-24 lg:py-28 bg-black text-white">
     <div class="container mx-auto flex flex-col items-center">
       <div class="grid grid-cols-1 gap-y-12 md:grid-flow-row md:grid-cols-2 md:items-stretch md:gap-x-12 lg:gap-x-20">
         <!-- Image on the left -->
@@ -170,8 +167,7 @@
     </div>
   </section>
 
-
-  <section id="relume" class="px-[5%] py-16 md:py-24 lg:py-28 bg-black">
+  <section id="contact" class="px-[5%] py-16 md:py-24 lg:py-28 bg-black">
     <div class="container mx-auto">
       <div class="flex items-center justify-center text-center">
         <div class="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-3 md:gap-x-16 md:gap-y-20">

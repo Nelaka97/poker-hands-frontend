@@ -4,7 +4,7 @@
       <div class="lg:flex lg:items-center">
         <div class="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <NuxtLink to="/" class="inline-block">
-            <img src="/logo.png" alt="Logo image" class="pt-4 pb-4 h-20"/>
+            <img src="/logo.png" alt="Logo image" class="pt-4 pb-4 h-20" />
           </NuxtLink>
           <button @click="toggleMobileMenu" class="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden">
             <span class="my-[3px] h-0.5 w-6 bg-background-primary"></span>
@@ -12,29 +12,77 @@
             <span class="my-[3px] h-0.5 w-6 bg-background-primary"></span>
           </button>
         </div>
-        <div :class="{'hidden': !isMobileMenuOpen, 'block': isMobileMenuOpen, 'lg:flex': true}" class="lg:flex lg:items-center lg:ml-6">
-          <div class="flex flex-col lg:flex-row lg:gap-6 px-[5%] lg:px-0 font-roboto text-base font-normal leading-6 text-left text-text-alternative">
-            <NuxtLink to="/about" class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base">About</NuxtLink>
-            <NuxtLink to="/contacts" class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base">Contacts</NuxtLink>
-            <NuxtLink to="/buy-hands-histories" class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base">Buy Hands History</NuxtLink>
+        <div :class="{ 'hidden': !isMobileMenuOpen, 'block': isMobileMenuOpen, 'lg:flex': true }"
+          class="lg:flex lg:items-center lg:ml-6">
+          <div
+            class="flex flex-col lg:flex-row lg:gap-6 px-[5%] lg:px-0 font-roboto text-base font-normal leading-6 text-left text-text-alternative">
+            <NuxtLink
+              to="/"
+              :class="getNavLinkClass('/')"
+              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base"
+            >
+              Home
+            </NuxtLink>
+            <NuxtLink
+              to="/about"
+              :class="getNavLinkClass('/about')"
+              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base"
+            >
+              About
+            </NuxtLink>
+            <NuxtLink
+              to="/#contact"
+              :class="getNavLinkClass('/#contact')"
+              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base"
+            >
+              Contacts
+            </NuxtLink>
+            <NuxtLink
+              to="/buy-hands-histories"
+              :class="getNavLinkClass('/buy-hands-histories')"
+              class="block py-3 text-md lg:px-4 lg:py-6 lg:text-base"
+            >
+              Buy Hands History
+            </NuxtLink>
+          </div>
+          <!-- Sign Up and Login for mobile view -->
+          <div class="flex flex-col gap-3 mt-4 px-[5%] lg:hidden">
+            <NuxtLink to="/sign-up">
+              <p class="text-text-white">Sign Up</p>
+            </NuxtLink>
+            <NuxtLink to="/login">
+              <p class="text-text-white pb-5">Login</p>
+            </NuxtLink>
           </div>
         </div>
       </div>
-      <div class="hidden lg:flex lg:gap-4">
-        <button class="text-text-white">Sign Up</button>
-        <button class="btn-secondary text-text-black">Login</button>
+      <div class="hidden lg:flex lg:gap-4 lg:items-center">
+        <NuxtLink to="/sign-up">
+          <p class="text-text-white">Sign Up</p>
+        </NuxtLink>
+        <NuxtLink to="/login">
+          <button class="btn-secondary text-text-black">Login</button>
+        </NuxtLink>
       </div>
     </div>
   </nav>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useRouter } from 'vue-router';
 
 const isMobileMenuOpen = ref(false);
+const router = useRouter();
 
 function toggleMobileMenu() {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
+}
+
+function getNavLinkClass(path) {
+  return router.currentRoute.value.path === path
+    ? 'text-white'
+    : 'text-text-white5 hover:text-white';
 }
 </script>
 
