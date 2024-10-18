@@ -23,7 +23,7 @@
       <div class="h-px w-full bg-gray-500"></div>
       <!-- Centered Text and Links for Mobile, Flex Row for Larger Screens -->
       <div class="flex flex-col-reverse items-center justify-center py-6 text-center text-sm md:flex-row md:justify-between md:py-8">
-        <p class="mt-6 md:mt-0 text-text-white3">© 2024 Relume. All rights reserved.</p> 
+        <p class="mt-6 md:mt-0 text-text-white3">© 2024 Poker Hands. All rights reserved.</p> 
         <ul class="flex flex-col items-center gap-y-4 text-center md:flex-row md:gap-x-6 text-text-white3">
           <li>
             <a href="#" class="underline text-text-white3 underline-offset-2 hover:text-text-white">Privacy
